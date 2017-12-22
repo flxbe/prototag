@@ -1,7 +1,7 @@
 """Unit tests
 """
 import unittest
-import prototag as pt
+import prototag.prototag as pt
 
 
 def create_gen(lines):

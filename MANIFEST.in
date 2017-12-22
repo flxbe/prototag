@@ -1,0 +1,14 @@
+# MANIFEST.in
+exclude .gitignore
+exclude .coverage
+exclude .travis.yml
+include README.md
+include setup.cfg
+prune .vscode
+prune .cache
+prune .git
+prune build
+prune dist
+recursive-prune */__pychache__
+recursive-exclude *.egg-info *
+recursive-include tests *
