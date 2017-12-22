@@ -59,7 +59,6 @@ def extract_header(filename):
     # check file ending
     _, ext = os.path.splitext(filename)
 
-    print(ext)
     if ext not in PARSERS:
         return None
 
@@ -98,7 +97,3 @@ def read_directory(path):
     result = [t for t in result if t[1] is not None]
 
     return result
-
-
-if __name__ == '__main__':
-    print('test')

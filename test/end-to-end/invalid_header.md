@@ -1,7 +1,7 @@
 <!-- invalid start line
-author: flxbe
-tags:
-  - the-new-google
+author: olli
+tag:
+  - python
   - idea
 -->
 

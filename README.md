@@ -1,32 +1,48 @@
 # Prototag
 
-My preferred way of memorizing ideas I have is by just creating a short `.md` file.
-I then use the naming convetion `JJJJ-MM-DD_name_with_underscores_for_spaces.md`.
-I tried several other tools to organize my ideas, but this just works best for me.
+A simple CLI tool to filter and list `.md` files based on comment headers.
 
-However, as the amount of files increase, it gets difficult to easily scan for protocolls
-that belong to a certain topic. Prototag solves this issue by extracting tags from a
-header in my `.md` files. The files can be filtered using the `prototag` CLI.
+## Motivation
+
+After testing multiple sophisticated tools to document small ideas or meetups,
+I found plain `.md` files and a flat directory structure to work best
+for me. I have built this tool to help me search these protocols in the
+terminal.
+
+The cli tool `ptag` scans a given directory for `.md` files and tries to
+extract a block comment at the start. If this comment includes valid `yaml`,
+the file is considered valid. One can specify selectors to further filter all
+valid files. The list of results is then printed to stdout.
 
 ## Example
 
+Consider the file `~/protocols/example.md`:
+
 ```md
 <!--
-authors: 
-  - flxbe
-tags: 
+author: 
+  - jan
+  - olli
+tag: 
   - idea
   - python
-  - the-next-google
 -->
 
 # Heading
 
-This will be the next big thing.
+Some text.
 ```
 
-One can then filter any folder for files by tag.
+One can filter the `~/protocols` directory using the cli tool `ptag`. The
+following command would return the above created filename.
 
 ```bash
-ptototag -t "idea, python" -t "the-next-google"
+ptag -t idea,python -a jan ~/protocols
+```
+
+This is equivalent to
+
+```bash
+cd ~/protocols
+ptag -t idea,python -a jan
 ```
