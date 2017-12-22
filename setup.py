@@ -35,11 +35,12 @@ class RunTests(Command):
 setup(
     name='ptag',
     version=__version__,
-    author='Felix Bernhardt',
-    author_email='felix.bernhardt@mailbox.org',
+    license='MIT',
     description='A small cli tool to filter plain text files by header tags.',
     long_description=LONG_DESC,
-    license='MIT',
+    url='https://github.com/flxbe/prototag',
+    author='Felix Bernhardt',
+    author_email='felix.bernhardt@mailbox.org',
     classifiers=[
         'Development Status :: 3 - Alpha',
 
@@ -49,11 +50,16 @@ setup(
         'License :: OSI Approved :: MIT License',
 
         'Operating System :: OS Independent',
+        'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
     ],
     keywords='cli',
     packages=find_packages(exclude=['contrib', 'docs', 'tests*']),
-    install_requires=['docopt'],
+    install_requires=['docopt', 'yaml'],
     extras_require={
         'test': ['coverage', 'pytest', 'pytest-cov'],
     },
