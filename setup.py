@@ -33,7 +33,7 @@ class RunTests(Command):
 
 
 setup(
-    name='ptag',
+    name='prototag',
     version=__version__,
     license='MIT',
     description='A small cli tool to filter plain text files by header tags.',
