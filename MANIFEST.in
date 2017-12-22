@@ -2,7 +2,7 @@
 exclude .gitignore
 exclude .coverage
 exclude .travis.yml
-include README.md
+include README.rst
 include setup.cfg
 prune .vscode
 prune .cache
@@ -11,4 +11,6 @@ prune build
 prune dist
 recursive-prune */__pychache__
 recursive-exclude *.egg-info *
-recursive-include tests *
+recursive-include test *.py
+recursive-include test/end-to-end *
+recursive-include test/integration *

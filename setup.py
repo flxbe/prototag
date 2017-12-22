@@ -9,7 +9,7 @@ from prototag import __version__
 
 
 PROJECT_DIR = os.path.abspath(os.path.dirname(__file__))
-README_PATH = os.path.join(PROJECT_DIR, 'README.md')
+README_PATH = os.path.join(PROJECT_DIR, 'README.rst')
 
 with open(README_PATH) as file:
     LONG_DESC = file.read()
@@ -59,6 +59,7 @@ setup(
     ],
     keywords='cli',
     packages=find_packages(exclude=['contrib', 'docs', 'tests*']),
+    package_data={'': ['test/end-to-end/*', 'test/integration/*']},
     install_requires=['docopt', 'yaml'],
     extras_require={
         'test': ['coverage', 'pytest', 'pytest-cov'],
