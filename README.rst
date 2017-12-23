@@ -87,8 +87,8 @@ following command would return the filename of the above created file.
 
     ptag -t idea,python -a jan ~/protocols
 
-The directory is optional and defaults to the current working directory.This is
-therefore equivalent to
+The directory is optional and defaults to the current working directory. This
+is therefore equivalent to
 
 .. code-block:: bash
 
