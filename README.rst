@@ -81,13 +81,14 @@ Consider the file ``~/protocols/example.md``:
     Some text.
 
 One can filter the ``~/protocols`` directory using the cli tool ``ptag``. The
-following command would return the above created filename.
+following command would return the filename of the above created file.
 
 .. code-block:: bash
 
     ptag -t idea,python -a jan ~/protocols
 
-This is equivalent to
+The directory is optional and defaults to the current working directory.This is
+therefore equivalent to
 
 .. code-block:: bash
 

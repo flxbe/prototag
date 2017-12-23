@@ -11,6 +11,9 @@ Options:
     -t <selector>, --tag <selector>
     -a <selector>, --author <selector>
 
+Directory:
+    The parameter ``<dir``is optional and defaults to the ``cwd``.
+
 Selectors:
     One can use logical AND and OR conditions to filter the found files with
     valid headers. AND terms are combined using `,` and OR terms are
