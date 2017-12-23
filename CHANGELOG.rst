@@ -1,6 +1,10 @@
 Changelog
 =========
 
+0.1.2 (2017-12-23)
+------------------
+- Extract cli to ``prototag/cli.py``.
+
 0.1.1 (2017-12-23)
 ------------------
 - Add ``CHANGELOG.rst``.

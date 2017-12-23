@@ -67,7 +67,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'ptag=prototag:main',
+            'ptag=prototag.cli:main',
         ],
     },
     python_requires='>=3',
