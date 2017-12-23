@@ -61,7 +61,7 @@ setup(
     keywords='cli',
     packages=['prototag'],
     package_data={'': ['test/end-to-end/*', 'test/integration/*']},
-    install_requires=['docopt', 'yaml'],
+    install_requires=['docopt', 'pyyaml'],
     extras_require={
         'test': ['coverage', 'pytest', 'pytest-cov'],
     },
