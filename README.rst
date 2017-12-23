@@ -38,8 +38,8 @@ Usage: ``ptag [options] [<dir>]``
     Filter the files by their author by specifying a selector.
 
 One can use logical AND and OR conditions to filter the found files with
-valid headers. AND terms are combined using `,` and OR terms are
-combined using `:`. OR terms are evaluated before AND terms. The OR
+valid headers. AND terms are combined using ',' and OR terms are
+combined using ':'. OR terms are evaluated before AND terms. The OR
 conditions are not exclusive.
 
 Select all files, that have both tag1 and tag2.
