@@ -3,16 +3,17 @@
 import os
 import subprocess
 
-from setuptools import Command, find_packages, setup
+from setuptools import Command, setup
 
 from prototag import __version__
 
 
 PROJECT_DIR = os.path.abspath(os.path.dirname(__file__))
-README_PATH = os.path.join(PROJECT_DIR, 'README.rst')
 
-with open(README_PATH) as file:
-    LONG_DESC = file.read()
+
+def read(filename):
+    with open(os.path.join(PROJECT_DIR, filename)) as f:
+        return f.read()
 
 
 class RunTests(Command):
@@ -37,7 +38,7 @@ setup(
     version=__version__,
     license='MIT',
     description='A small cli tool to filter plain text files by header tags.',
-    long_description=LONG_DESC,
+    long_description=read('README.rst') + '\n\n' + read('CHANGELOG.rst'),
     url='https://github.com/flxbe/prototag',
     author='Felix Bernhardt',
     author_email='felix.bernhardt@mailbox.org',
@@ -58,7 +59,7 @@ setup(
         'Programming Language :: Python :: 3.6',
     ],
     keywords='cli',
-    packages=find_packages(exclude=['contrib', 'docs', 'tests*']),
+    packages=['prototag'],
     package_data={'': ['test/end-to-end/*', 'test/integration/*']},
     install_requires=['docopt', 'yaml'],
     extras_require={

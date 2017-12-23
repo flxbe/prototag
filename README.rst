@@ -16,6 +16,50 @@ extract a block comment at the start. If this comment includes valid ``yaml``,
 the file is considered valid. One can specify selectors to further filter all
 valid files. The list of results is then printed to stdout.
 
+Installation
+------------
+
+.. code-block:: bash
+
+    pip install prototag
+
+Synopsis
+--------
+
+Usage: ``ptag [options] [<dir>]``
+
+-h, --help              
+    Show help.
+-v, --version           
+    Show version.
+-t <selector>, --tag <selector>
+    Filter the files by tags by specifying a selector.
+-a <selector>, --author <selector>
+    Filter the files by their author by specifying a selector.
+
+One can use logical AND and OR conditions to filter the found files with
+valid headers. AND terms are combined using `,` and OR terms are
+combined using `:`. OR terms are evaluated before AND terms. The OR
+conditions are not exclusive.
+
+Select all files, that have both tag1 and tag2.
+
+.. code-block:: bash
+
+    ptag -t tag1,tag2
+
+Select all files, that have at least one of both tags.
+
+.. code-block:: bash
+
+    ptag -t tag1:tag2
+    
+Select all files, that have either tag1 and tag2 or tag3 or both.
+
+.. code-block:: bash
+
+    ptag -t tag1,tag2:tag3
+
 Example
 -------
 

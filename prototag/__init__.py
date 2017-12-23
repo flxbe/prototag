@@ -39,7 +39,7 @@ from docopt import docopt
 import prototag.prototag as pt
 import prototag.selector as selector
 
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 
 
 def main():

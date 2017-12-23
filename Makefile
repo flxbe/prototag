@@ -1,4 +1,4 @@
-VERSION := 0.1.0
+VERSION := 0.1.1
 
 SOURCE_FILES := prototag/*.py test/*.py
 SOURCE := dist/prototag-$(VERSION).tar.gz
@@ -10,8 +10,12 @@ clean:
 		rm -rf ./build
 		rm -rf ./dist
 
+readme:
+		restview --pypi-strict --long-description
+
 test-upload: build
-		twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+		twine upload --repository-url $(SOURCE) $(SOURCE).asc
+		twine upload --repository-url $(WHEEL) $(WHEEL).asc
 
 upload: build
 		twine upload $(SOURCE) $(SOURCE).asc
