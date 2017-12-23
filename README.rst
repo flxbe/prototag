@@ -1,6 +1,9 @@
 Prototag
 ========
 
+.. image:: https://travis-ci.org/flxbe/prototag.svg?branch=master
+    :target: https://travis-ci.org/flxbe/prototag
+
 A simple CLI tool to filter and list ``.md`` files based on comment headers.
 
 Motivation
