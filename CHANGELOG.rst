@@ -9,6 +9,7 @@ Changelog
 ------------------
 - Add ``CHANGELOG.rst``.
 - Update ``README.rst``.
+- Support Python ``2.7``.
 
 0.1.0 (2017-12-22)
 ------------------
