@@ -7,10 +7,13 @@ include setup.cfg
 prune .vscode
 prune .cache
 prune .git
+prune env
+prune env2
 prune build
 prune dist
 recursive-prune */__pychache__
 recursive-exclude *.egg-info *
+recursive-exclude *.pyc *
 recursive-include test *.py
 recursive-include test/end-to-end *
 recursive-include test/integration *

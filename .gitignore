@@ -1,7 +1,12 @@
-**/__pycache__
 .vscode
-.cache
 
+env
+env2
+**/__pycache__
+.cache
+*.pyc
+
+.coverage
 dist
 build
 *.egg-info

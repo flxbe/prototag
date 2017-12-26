@@ -34,7 +34,7 @@ Examples:
 Description:
     Filter all .md files in a directory by values in a comment header.
 """
-from __future__ import print_function
+from __future__ import print_function, absolute_import
 import os
 
 from docopt import docopt
