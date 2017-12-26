@@ -31,6 +31,3 @@ build: $(SOURCE).asc $(WHEEL).asc
 
 %.whl: $(SOURCE_FILES)
 		python setup.py bdist_wheel
-
-activate:
-		@source ./env/bin/activate

@@ -97,3 +97,10 @@ is therefore equivalent to
 
     cd ~/protocols
     ptag -t idea,python -a jan
+
+Roadmap
+-------
+- Add a ``date`` field.
+- Add command to list all tags and authors.
+- Add command to create new protocols.
+- Add command to list files with invalid headers including debug messages.
