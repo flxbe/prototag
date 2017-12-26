@@ -1,4 +1,4 @@
-VERSION := 0.1.1
+VERSION := 0.1.2
 
 SOURCE_FILES := prototag/*.py test/*.py
 SOURCE := dist/prototag-$(VERSION).tar.gz
