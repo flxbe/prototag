@@ -10,13 +10,13 @@ Motivation
 ----------
 
 After testing multiple sophisticated tools to document small ideas or meetups,
-I found plain ``.md`` files and a flat directory structure to work best
-for me. I have built this tool to help me search these protocols in the
-terminal.
+I found plain ``.md`` files to work best for me. Until a project deserves its
+own repository, I just create small protocols in a single, dedicated directory.
+I have built this tool to help me search this directory via the terminal.
 
 The cli tool ``ptag`` scans a given directory for ``.md`` files and tries to
 extract a block comment at the start. If this comment includes valid ``yaml``,
-the file is considered valid. One can specify selectors to further filter all
+the file is considered valid. One can specify selectors to filter these
 valid files. The list of results is then printed to stdout.
 
 Installation
